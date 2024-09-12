@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="productsstyle.css">
+    <title>MODARA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+<body>
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="index.html">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; Enter the website</a>
+        </div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <span style="font-size:26px;cursor:pointer" onclick="openNav()">
+            <i class="fas fa-home"></i> 
+        </span>
+        
+        <div class="container">
+            <a href="C:\Users\Acer\Desktop\ITBNM-2211-0177\modaralogo.png" class="logo">MODARA</a>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchFunction()">
+                <button onclick="searchFunction()">
+                    <i class="fa fa-search"></i> <!-- Modern search icon -->
+                </button>
+                <div class="cart-icon">
+                    <button onclick="toggleCart()">
+                        <i class="fa fa-shopping-cart"></i> <!-- Modern cart icon -->
+                        <span id="cart-count" class="cart-count">0</span> <!-- Cart count -->
+                    </button>
+                </div>
+                
+               
+            </div>
+        </div>
+    </nav>
+
+    <div class="main">
+
+        <h1>Products</h1>
+        <hr>
+        
+        <h2>Categories</h2>
+        
+        <div id="myBtnContainer">
+          <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+          <button class="btn" onclick="filterSelection('Skin Care Product Kit')"> Skin Care Product Kit</button>
+          <button class="btn" onclick="filterSelection('Hair Care Product Kit')"> Hair Care Product Kit</button>
+          <button class="btn" onclick="filterSelection('Perfumes')"> Perfumes</button>
+          <button class="btn" onclick="filterSelection('Decorative Cosmetics')">Decorative Cosmetics</button>
+
+        </div>
+        
+        <!-- Portfolio Gallery Grid -->
+        <div class="row">
+          <!-- Skin Care Product Kit -->
+          <div class="column Skin Care Product Kit show">
+            <div class="content">
+                <img src="https://allurelixir.com/wp-content/uploads/2021/09/CCA1AED3-01BE-44EB-8D13-ABBAD5EC6C5A-scaled.jpeg" alt="Brightening Skin Care Kit">
+                <h3>Brightening Skin Care Kit</h3>
+                <ul class="Benifits">
+                    <li>Brighten dull/tanned skin</li>
+                    <li>Impart glow</li>
+                    <li>Anti aging</li>
+                    <li>Repair damage and moisturise</li>
+                    <li>Enhance complexion</li>
+                    <li>Reduce hyperpigmentation</li>
+                    <li>Reduce black spots</li>
+                    <li>Used for under eye / under arm darkness, uneven skin tone</li>
+                      
+                      
+                  </ul>
+                <!-- Display both original price and discount price -->
+                <p class="price">
+                    <span class="original-price">$50.54</span>
+                    <span class="discount-price">$30.54</span>
+                </p>
+                <button onclick="addToCart('Brightening Skin Care Kit', 30.54)">Add to Cart</button>
+            </div>
+            
+          </div>
+          <div class="column Skin Care Product Kit show">
+            <div class="content">
+                <img src="https://m.media-amazon.com/images/I/61pDecT458L._SX466_.jpg" alt="Moisturizing Skin care Kit">
+                <h3>Moisturizing Skin care Kit</h3>
+                <ul class="Benifits">
+                    <li>Moisturizing</li>
+                    <li>wrinkle reduction</li>
+                    <li>pore shrinkage</li>
+                    <li>acne marks removal</li>
+                    <li>skin tightening</li>
+                    <li>deep cleansing</li>
+                    <li>oil control</li>
+                    <li>suitable for all skin types</li>
+                  </ul>
+                <!-- Display both original price and discount price -->
+                <p class="price">
+                    <span class="original-price">$25.99</span>
+                    <span class="discount-price">$19.99</span>
+                </p>
+                <button onclick="addToCart('Moisturizing Skin care Kit', 19.99)">Add to Cart</button>
+            </div>
+            
+          </div>
+          <div class="column Skin Care Product Kit show">
+            <div class="content">
+                <img src="https://yadasutra.com/wp-content/uploads/2023/11/IMG_0413-final-scaled.jpg" alt="Ayurveda Skin Care Kit">
+                    <h3>Ayurveda Skin Care Kit</h3>
+                <ul class="Benifits">
+                    <li>Nourish your skin</li>
+                    <li>Protect your skin</li>
+                    <li>Balance oil production</li>
+                    <li>Exfoliate regularly</li>
+                    
+                  </ul>
+                <!-- Display both original price and discount price -->
+                <p class="price">
+                    <span class="original-price">$15.99</span>
+                    <span class="discount-price">$11.99</span>
+                </p>
+                <button onclick="addToCart('Ayurveda Skin Care Kit', 11.99)">Add to Cart</button>
+            </div>
+        </div>
+          <!-- More iPhone products can be added here -->
+          <div class="column Skin Care Product Kit show">
+            <div class="content">
+                <img src="https://www.adashiko.com/cdn/shop/products/8.CompleteSkincareKit.jpg?v=1679517818&width=540" alt="Collagen Skin Care Kit">
+                <h3>Collagen Skin Care Kit</h3>
+                <ul class="Benifits">
+                    <li>Supports skin elasticity</li>
+                    <li>Enhances skin firmness</li>
+                    <li>Minimizes the look of fine lines and wrinkles</li>
+                    <li>Reduces the look of pores</li>
+                    <li>Provides a plump and youthful appearance</li>
+                      
+                  </ul>
+                <!-- Display both original price and discount price -->
+                <p class="price">
+                    <span class="original-price">$370.74</span>
+                    <span class="discount-price">$266.74</span>
+                </p>
+                <button onclick="addToCart('Collagen Skin Care Kit', 266.74)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="column Skin Care Product Kit show">
+            <div class="content">
+                <img src="https://m.media-amazon.com/images/I/61hNZMdSWWL._SL1500_.jpg" alt="Korean Care Kit">
+                <h3>Korean Skin Care Kit</h3>
+                <ul class="Benifits">
+                    <li>Achieving the ‘Glass Skin’ Glow</li>
+                    <li>Skin’s Barrier Strengthening</li>
+                    <li>Innovations Tailored for Every Need</li>
+                    <li>Focus on Preventive Care</li>
+                    <li>Emphasis on Natural Ingredients</li>
+                    <li>Hyperpigmentation</li>
+                  </ul>
+                <!-- Display both original price and discount price -->
+                <p class="price">
+                    <span class="original-price">$70.00</span>
+                    <span class="discount-price">$54.00</span>
+                </p>
+                <button onclick="addToCart('Korean Skin Care Kit', 54.00)">Add to Cart</button>
+            </div>
+        </div>
+        
+          <!-- Hair Care Product Kit -->
+          <div class="column Hair Cair Product Kit show">
+            <div class="content">
+              <img src="https://www.simplyorganicbeauty.com/wp-content/uploads/2023/08/Anti-Frizz.png" alt="Organic Hair Care Kit">
+              <h4>Organic Hair Care Kit</h4>
+              <ul class="Benifits">
+                <li>Creates fullness and shine</li>
+                <li>Adds structure and volume</li>
+                <li>Gluten-free, Cruelty-Free & Vegan</li>
+                <li>Blocks frizz</li>
+                <li>Ideal for natural and chemically treated hair</li>
+                <li>Deeply hydrating</li>
+                <li>Smooths hair</li>
+                <li>Balances natural moisture</li>
+              </ul>
+              <p class="price">
+                <span class="original-price">$65.00</span>
+                <span class="discount-price">$50.00</span>
+              </p>
+              <button onclick="addToCart('Organic Hair Care Kit', 50.00)">Add to Cart</button>
+            </div>
+          </div>
+          <div class="column Hair Care Product Kit show">
+          <div class="content">
+            <img src="https://rahua.com/cdn/shop/products/CustomizableKitPrism.jpg?v=1714660478&width=1100" alt="Daily Hair Care Kit">
+            <h4>Daily Hair Care Kit</h4>
+            <ul class="Benifits">
+              <li>Plant powered hair care essentials</li>
+              <li>Classic = Fortify</li>
+              <li>Voluminous = Volumize</li>
+              <li>Color Full = Extend Colorgle charge</li>
+              <li>Hydration = Hydrate</li>
+            </ul>
+            <p class="price">
+              <span class="original-price">$55.00</span>
+              <span class="discount-price">$40.00</span>
+            </p>
+            <button onclick="addToCart('Daily Hair Care Ki', 40.00)">Add to Cart</button>
+          </div>
+        </div>
+        <div class="column Hair Care Product Kit show">
+            <div class="content">
+              <img src="https://lk.spaceylon.com/products/virgin-coconut-hair-care-discovery-set" alt="Virgin Coconut Hair care Discovery Kit">
+              <h4>Virgin Coconut Hair care Discovery Kit</h4>
+              <ul class="Benifits">
+                <li>Make Hair Shiny and Smooth</li>
+              <li>Tames Frizz</li>
+              <li> Strengthens the Cuticle</li>
+              <li>help Fight Dandruff</li>
+              <li>help moisturize and repair damaged hair</li>
+              <li>help Repair Split Ends</li>
+              </ul>
+              <p class="price">
+                <span class="original-price">$30.00</span>
+                <span class="discount-price">$20.00</span>
+              </p>
+              <button onclick="addToCart('Virgin Coconut Hair care Discovery Kit', 20.00)">Add to Cart</button>
+            </div>
+          </div>
+         
+          <!-- More Hair Care Product Kit can be added here -->
+        
+          <!-- Purfumes -->
+          <div class="column Perfumes show">
+            <div class="content">
+              <img src="https://m.media-amazon.com/images/I/61XudjcLXuL._SX522_.jpg" alt="Ariana Grande Thank U Next Eau de Parfume">
+              <h4>Ariana Grande Thank U Next Eau de Parfume</h4>
+              <ul class="Benifits">
+                <li>Superior Quality Fragrance</li>
+                <li>This product is made of high quality material</li>
+                <li>It is recommended for romantic wear</li>
+                <li>All our fragrances are 100% originals by their original designers</li>
+                <li>>Perfect Fragrance for any occasions, events and evenings</li>
+              </ul>
+              <p class="price">
+                <span class="original-price">$70.00</span>
+                <span class="discount-price">$50.00</span>
+              </p>
+              <button onclick="addToCart('Ariana Grande Thank U Next Eau de Parfume', 50.00)">Add to Cart</button>
+            </div>
+          </div>
+          <div class="column Perfumes show">
+            <div class="content">
+              <img src="https://www.daraz.lk/products/sweet-love-golden-perfume-50ml-golden-perfume-best-for-gift-best-smell-perfume-fragrances-eau-de-toilette-i129537192.html" alt="Sweet Love Golden Perfume">
+              <h4>Sweet Love Golden Perfume</h4>
+              <ul class="Benifits">
+                <li>Long lasting fragrance.</li>
+              <li>Limited Edition</li>
+              <li>Only from Our Store</li>
+              <li>Specially made for Women</li>
+              <li>Makes you more attracted at any event</li>
+              <li>Perfect gift for your love ones</li>
+              </ul>
+              <p class="price">
+                <span class="original-price">15.00</span>
+                <span class="discount-price">10.00</span>
+              </p>
+              <button onclick="addToCart('Sweet Love Golden Perfume', 10.00)">Add to Cart</button>
+            </div>
+          </div>
+          <div class="column Perfumes show">
+            <div class="content">
+              <img src="https://cdn.saksfifthavenue.com/is/image/saks/0425588705428_NOCOLOR_A1?wid=484&hei=646&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0" alt="La Vie Est Belle Eau de Perfume">
+              <h4>La Vie Est Belle Eau de Perfume</h4>
+              <ul class="Benifits">
+                <li>Brings Back Memories</li>
+                <li>Elevates Your Confidence Levels</li>
+                <li> Leaves You Feeling Refreshed</li>
+                <li>Amplifies Your Productivity</li>
+                <li>Makes a Positive Impression</li>
+              </ul>
+              <p class="price">
+                <span class="original-price">$135.00</span>
+                <span class="discount-price">$110.00</span>
+              </p>
+              <button onclick="addToCart('La Vie Est Belle Eau de Perfume', 110.00)">Add to Cart</button>
+            </div>
+          </div>
+          <div class="column Perfumes show">
+            <div class="content">
+              <img src="https://cdn.saksfifthavenue.com/is/image/saks/0467455311585_NOCOLOR_A1?wid=484&hei=646&qlt=90&resMode=sharp2&op_usm=0.9,1.0,8,0" alt="J adore Eau De Perfume">
+              <h4>J adore Eau De Perfume</h4>
+              <ul class="Benifits">
+                <li>Pleasurable sensory experience</li>
+              <li>Longer-lasting fragrance </li>
+              <li>Prestige and status </li>
+              <li>Unique, exclusive scents</li>
+              <li>Superior quality and ingredients</li>
+              </ul>
+              <p class="price">
+                <span class="original-price">$190.00</span>
+                <span class="discount-price">$165.00</span>
+              </p>
+              <button onclick="addToCart('J adore Eau De Perfume', 165.00)">Add to Cart</button>
+            </div>
+          </div>
+          
+          <!-- More Perfumes can be added here -->
+         
+        </div>
+        <!-- END GRID -->
+         <!-- Decorative Cosmetics -->
+<div class="column Decorative Cosmetics show">
+    <div class="content">
+        <img src="https://m.media-amazon.com/images/I/71KPvm+eaZL._SL1500_.jpg" alt="Makeup Kit for Women Full Kit, 20PCS Multi-Purpose Makeup Kit All-in-One" class="product-image">
+        <div class="overlay-latest">
+          <h3>Makeup Kit for Women Full Kit, 20PCS Multi-Purpose Makeup Kit All-in-One</h3>
+          <ul class="Benifits">
+            <li>Waterproof</li>
+                      <li>Weightless</li>
+                      <li>All skin types</li>
+                      <li>100% Branded</li>
+          </ul>
+      <p class="price">
+        <span class="original-price">$50.00</span>
+        <span class="discount-price">$35.00</span>
+      </p>
+      <button onclick="addToCart('Makeup Kit for Women Full Kit, 20PCS Multi-Purpose Makeup Kit All-in-One', 35.00)">Add to Cart</button>
+    </div>
+  </div>
+  
+  
+        </div>
+        <div class="column Decorative Cosmetics show">
+            <div class="content">
+                <img src="https://m.media-amazon.com/images/I/81j4nt1jS2L._SL1500_.jpg" alt="All in One Makeup Kit for Women Full Kit" class="product-image">
+                <div class="overlay-latest">  <h3>All in One Makeup Kit for Women Full Kit</h3>
+                  <ul class="Benifits">
+                    <li>All-in-One makeup kit for women</li>
+                    <li>Includes eyeshadow palette, face foundation makeup, concealer, lipstick, and more</li>
+                    <li>High-quality and skin-friendly cosmetics</li>
+                    <li>Perfect for beginners or professionals</li>
+                    <li>A great gift for any occasion</li>
+                    <li>100% cruelty-free brand</li>
+                    
+                  </ul>
+              <p class="price">
+                <span class="original-price">$75.00</span>
+                <span class="discount-price">$60.00</span>
+              </p>
+              <button onclick="addToCart('All in One Makeup Kit for Women Full Kit', 60.00)">Add to Cart</button>
+            </div>
+          </div>
+          
+        </div>
+        <div class="column Decorative Cosmetics show">
+            <div class="content">
+                <img src="https://m.media-amazon.com/images/I/81vssL9O5CL._SL1500_.jpg" alt="All in One Makeup Kit Makeup Kit for Women Full Kit Multipurpose Makeup" class="product-image">
+                <div class="overlay-latest">  <h3>All in One Makeup Kit Makeup Kit for Women Full Kit Multipurpose Makeup</h3>
+                  <ul class="Benifits">
+                    <li>All in one makeup kit for achieving a full-face flawless look</li>
+                    <li>Made with natural gentle ingredients and nourishing formula</li>
+                    <li>Waterproof, long-lasting, and suitable for all skin types</li>
+                    
+                  </ul>
+              <p class="price">
+                <span class="original-price">$75.00</span>
+                <span class="discount-price">$54.00</span>
+              </p>
+              <button onclick="addToCart('All in One Makeup Kit Makeup Kit for Women Full Kit Multipurpose Makeup', 54.00)">Add to Cart</button>
+            </div>
+          </div>
+          <div class="column Decorative Cosmetics show">
+            <div class="content">
+                <img src="https://m.media-amazon.com/images/I/81bp1Rqw-ZL._SL1500_.jpg" alt="All in One Makeup Kit for Makeup storage bag " class="product-image">
+                <div class="overlay-latest">  <h3>All in One Makeup Kit for Makeup storage bag</h3>
+                  <ul class="Benifits">
+                    <li>14 Color Eyeshadow Palettes in 2 different styles</li>
+                    <li>Long-lasting and waterproof makeup set</li>
+                    <li>Comes with 5 Lip Gloss and 3 different styles of Foundation</li>
+                    <li>Includes 20 Makeup Brushes and a Makeup storage bag</li>
+                    <li>Great for exploring colors and makeup artistry for different occasions</li>
+                    <li>Made from the best pigments and purest mineral oil, safe for all skin types</li>
+                    
+                  </ul>
+              <p class="price">
+                <span class="original-price">$50.00</span>
+                <span class="discount-price">$38.00</span>
+              </p>
+              <button onclick="addToCart('All in One Makeup Kit for Makeup storage bag', 38.00)">Add to Cart</button>
+            </div>
+          </div>
+          <div class="column Decorative Cosmetics show">
+            <div class="content">
+                <img src="https://m.media-amazon.com/images/I/81AdNvAEavL._SL1500_.jpg" alt="Complete Makeup Set with Eyeshadow, Lipstick, Mascara, and More in Elegant Box" class="product-image">
+                <div class="overlay-latest">  <h3>Complete Makeup Set with Eyeshadow, Lipstick, Mascara, and More in Elegant Box</h3>
+                  <ul class="Benifits">
+                    <li>Includes all essentials in one elegant box</li>
+                    <li>Soft, smooth, and easy to layer and blend</li>
+                    <li>Waterproof and long-lasting powder</li>
+                    <li>Ideal gift for various occasions</li>
+                    <li>Comprehensive after-sales service provided</li>
+                    
+                  </ul>
+              <p class="price">
+                <span class="original-price">$55.00</span>
+                <span class="discount-price">$46.00</span>
+              </p>
+              <button onclick="addToCart('Complete Makeup Set with Eyeshadow, Lipstick, Mascara, and More in Elegant Box', 46.00)">Add to Cart</button>
+            </div>
+          </div>
+        
+        <!-- END MAIN -->
+        </div>
+     <!-- Footer -->
+<footer class="footer">
+    <div class="container-footer">
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+          <a href="https://web.facebook.com/profile.php?id=61565555757470" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/modara863/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UCZ3KyXdjjO2So82owYsPsFA" target="_blank" title="youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <!-- Address Section -->
+        <div class="address">
+          <p>MODARA</p>
+          <p>Malabe,Colombo, Sri Lanka, 10115</p>
+          <p>Email: <a href="mailto:modara912@gmail.com">modara912@gmail.com</a> | Phone: (+94) 71 851 2067</p>
+          <p>&copy; 2024 MODARA. All rights reserved.</p>
+        </div>
+
+        <!-- Google Maps Location -->
+        <div class="map">
+          <iframe src="https://maps.app.goo.gl/R12RnpEANcKTsXba6" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</footer>
+
+
+    
+
+    <script src="productsscripts.js"></script>
+</body>
+</html>

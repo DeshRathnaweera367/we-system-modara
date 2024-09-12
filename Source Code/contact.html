@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contactstyle.css">
+    <title>MODARA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+<body>
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; Enter the website</a>
+        </div>
+    </div>
+    
+    <nav class="navbar" id="navbar">
+        <span style="font-size:26px;cursor:pointer" onclick="openNav()">
+            <i class="fas fa-home"></i> 
+        </span>
+        
+        <div class="container">
+            <a href="C:\Users\Acer\Desktop\ITBNM-2211-0177\modaralogo.png" class="logo">MODARA</a>
+           
+                
+               
+            </div>
+        </div>
+        
+    </nav>
+    
+
+    <h3 class="contact-form-title">Contact Form</h3>
+<div class="contact-form-container">
+
+  <form id="contactForm" action="/action_page.php" method="post">
+    
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" name="firstname" placeholder="Your name.." required pattern="[A-Za-z\s]{1,50}" title="Please enter a valid name (letters and spaces only, max 50 characters)">
+    <div class="validation-error-message" id="firstNameError"></div>
+
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="lastname" placeholder="Your last name.." required pattern="[A-Za-z\s]{1,50}" title="Please enter a valid last name (letters and spaces only, max 50 characters)">
+    <div class="validation-error-message" id="lastNameError"></div>
+
+    <label for="emailAddress">Email</label>
+    <input type="email" id="emailAddress" name="email" placeholder="Your email.." required>
+    <div class="validation-error-message" id="emailError"></div>
+
+    <label for="countrySelect">Country</label>
+    <select id="countrySelect" name="country" required>
+      <option value="">Select your country</option>
+      <option value="france">Franceesh</option>
+      <option value="korea">Korea</option>
+      <option value="india">India</option>
+      <option value="maldives">Maldives</option>
+      <option value="nepal">Nepal</option>
+      <option value="pakistan">Pakistan</option>
+      <option value="japan">japan</option>
+      <option value="canada">Canada</option>
+      <option value="russia">Russia</option>
+      <option value="malaysia">Malasiya</option>
+      <option value="italy">Italy</option>
+      <option value="dubai">Dubai</option>
+      <option value="saudi arabia">Saudi Arabia</option>
+      <option value="australia">Australia</option>
+      <option value="sri lanka">Sri Lanka</option>
+    </select>
+
+    <div class="validation-error-message" id="countryError"></div>
+
+    <label for="messageSubject">Subject</label>
+    <textarea id="messageSubject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+    <div class="validation-error-message" id="subjectError"></div>
+
+    <!-- Centered Button -->
+    <div class="submit-button-container">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+    
+
+     <!-- Footer -->
+<footer class="footer">
+    <div class="container-footer">
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://web.facebook.com/profile.php?id=61565555757470" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/modara863/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UCZ3KyXdjjO2So82owYsPsFA" target="_blank" title="youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <!-- Address Section -->
+        <div class="address">
+            <p>MODARA</p>
+            <p>Malabe,Colombo, Sri Lanka, 10115</p>
+            <p>Email: <a href="mailto:modara912@gmail.com">modara912@gmail.com</a> | Phone: (+94) 71 851 2067</p>
+            <p>&copy; 2024 MODARA. All rights reserved.</p>
+        </div>
+
+        <!-- Google Maps Location -->
+        <div class="map">
+            <iframe src="https://maps.app.goo.gl/R12RnpEANcKTsXba6" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="contactscript.js"></script> 
+</body>
+</html>

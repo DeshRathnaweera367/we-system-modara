@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registerstyle.css">
+    <title>MODARA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div id="myNav" class="overlay">
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; Enter the website</a>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <span class="menu-icon" onclick="openNav()">
+            <i class="fas fa-home"></i>
+        </span>
+        
+        <div class="container-topic">
+            <a href="C:\Users\Acer\Desktop\ITBNM-2211-0177\modaralogo.png" class="logo">MODARA</a>
+        </div>
+    </nav>
+            
+    <!-- Add wrapper for centering -->
+    <div class="wrapper">
+        
+        <div class="container">
+            <h2>Create an Account</h2>
+            <form id="registrationForm">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <div class="error" id="nameError"></div>
+
+                <input type="text" id="phone" placeholder="+94xxxxxxxxx" required>
+                <div class="error" id="phoneError"></div>
+
+                <input type="text" id="username" placeholder="Username" required>
+                <div class="error" id="usernameError"></div>
+
+                <input type="password" id="password" placeholder="Password" required>
+                <div class="error" id="passwordError"></div>
+
+                <input type="password" id="confirmPassword" placeholder="Re-enter Password" required>
+                <div class="error" id="confirmPasswordError"></div>
+                <select id="country" required>
+                    <option value="" disabled selected>Select your country</option>
+                    <option value="">Select your country</option>
+                    <option value="france">Franceesh</option>
+                    <option value="korea">Korea</option>
+                    <option value="india">India</option>
+                    <option value="maldives">Maldives</option>
+                    <option value="nepal">Nepal</option>
+                    <option value="pakistan">Pakistan</option>
+                    <option value="japan">japan</option>
+                    <option value="canada">Canada</option>
+                    <option value="russia">Russia</option>
+                    <option value="malaysia">Malasiya</option>
+                    <option value="italy">Italy</option>
+                    <option value="dubai">Dubai</option>
+                    <option value="saudi arabia">Saudi Arabia</option>
+                    <option value="australia">Australia</option>
+                    <option value="sri lanka">Sri Lanka</option>
+                </select>
+                <div class="error" id="countryError"></div>
+        
+                <input type="text" id="nic" placeholder="NIC Number" required>
+                <div class="error" id="nicError"></div>
+
+                <input type="submit" value="Create Account">
+            </form>
+            <div class="links">
+                <a href="loggin.html">Already have an account? Login here</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-footer">
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://web.facebook.com/profile.php?id=61565555757470" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/modara863/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCZ3KyXdjjO2So82owYsPsFA" target="_blank" title="youtube"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <!-- Address Section -->
+            <div class="address">
+                <p>MODARA</p>
+            <p>Malabe,Colombo, Sri Lanka, 10115</p>
+            <p>Email: <a href="mailto:modara912@gmail.com">modara912@gmail.com</a> | Phone: (+94) 71 851 2067</p>
+            <p>&copy; 2024 MODARA. All rights reserved.</p>
+            </div>
+
+            <!-- Google Maps Location -->
+            <div class="map">
+                <iframe src="https://maps.app.goo.gl/R12RnpEANcKTsXba6" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </footer>
+
+    <script src="registerscript.js"></script>
+</body>
